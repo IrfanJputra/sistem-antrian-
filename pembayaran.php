@@ -7,8 +7,8 @@
 
 
 //ambil data terbesar 
-$huruf = 'A';
-$query=mysqli_query($conn, "SELECT max(no_antrian) as max_code FROM tb_administrasi");
+$huruf = 'T';
+$query=mysqli_query($conn, "SELECT max(no_antrian) as max_code FROM tb_pembayaran");
 $data = mysqli_fetch_array($query);
 $kode = $data['max_code'];
 
@@ -58,7 +58,7 @@ $newKode = $huruf . sprintf("%03s", $urutan);
 				<div class="content">
 					<div class="container-fluid">
 
-                    <form method="post" action="simpan.php">
+                    <form method="post" action="p_simpan.php">
                        
                         <br>
                         <br>

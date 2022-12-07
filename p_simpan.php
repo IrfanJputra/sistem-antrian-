@@ -5,9 +5,9 @@ include 'database/konfig.php';
  
 // menangkap data dari form
 $kode = $_POST['kode'];
-// menginput data ke table
+// menginput data ke table 
  
-mysqli_query($conn,"INSERT INTO tb_administrasi VALUES ('$kode')")or die(mysqli_error($conn));
+mysqli_query($conn,"INSERT INTO tb_pembayaran VALUES ('$kode')")or die(mysqli_error($conn));
  
 // mengalihkan halaman kembali ke index.php
 echo "<script> 
