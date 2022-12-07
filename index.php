@@ -1,4 +1,9 @@
 <?php include 'template/navbar.php'; ?>
+<style type="text/css">
+  .navbar{
+	display: none;
+  }
+</style>
 <div class="settings">
 					<div class="modal fade" id="settingsModal"
 						aria-labelledby="settingsModalTitle" aria-hidden="true"

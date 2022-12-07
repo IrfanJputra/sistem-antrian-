@@ -20,13 +20,10 @@
 
 			<nav id="sidebar" class="active">
 
-				<div class="sidebar-header text-center">
-					<a href="index.php"><img src="assets/img/leaf.svg" alt="logo" class="app-logo"></a>
-					<a href="index.php"><h4 class="sidebar-title theme-item">AVNI</h4>  </a>
-				</div>
+
 
 				<div class="text-center mt-5 mb-5">
-					<a href="#" class="theme-btn" onClick="removeCookieSidebar()">Reset</a>
+					<a href="#" class="theme-btn" >Reset</a>
 				</div>
 
 			</nav>

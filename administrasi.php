@@ -1,3 +1,5 @@
+
+
 <?php include 'template/navbar.php'; ?>
 <?php include 'database/konfig.php'; ?>
 
@@ -20,7 +22,39 @@ $urutan = (int)substr($kode, 1, 3);
 $newKode = $huruf . sprintf("%03s", $urutan);
 
 ?>
+<style type="text/css">
+@media print {
+  #printPageButton {
+    display: none;
+  }
+  #logo{
+	display: none;
+  }
+  .card{
+	border: 0px;
+	box-shadow: none;
+  }
+  .navbar{
+	display: none;
+  }
+}
 
+#nomorAntri{
+	font-size: 40px;
+	font-weight: bold;
+	/* border: 10px; */
+	 width: 200px;
+     height: 200px;
+     text-align: center;
+	 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	
+}
+
+.navbar{
+	display: none;
+  }
+
+</style>
 				<div class="content">
 					<div class="container-fluid">
 
@@ -32,8 +66,7 @@ $newKode = $huruf . sprintf("%03s", $urutan);
                         <br>
                         <br>
                         <br>
-                        <br>
-                        <br>
+						<div id="konten">
 						<div class="row">
                             <div class="col-md-4">
                             </div>
@@ -42,17 +75,17 @@ $newKode = $huruf . sprintf("%03s", $urutan);
 									<div class="content">
 										<div class="row">
 											<div class="dfd text-center">
-												<i class="blue data-feather-big" stroke-width="3"
+												<i id="logo" class="blue data-feather-big" stroke-width="3"
 													data-feather="arrow-up-circle"></i>
                                                     <h4 class="mb-3">NO ANTRIAN</h4>
 													
 													<div class="">
-													<input type="text" name="kode" class="form-control-lg text-center" value="<?php echo $newKode?>" readonly>
+													<input id="nomorAntri" type="text" name="kode" class="form-control-lg text-center" value="<?php echo $newKode?>" readonly>
 													<br>
 													<br>
 													</div>
 													
-													<button type="submit" value="Simpan" class="btn btn-danger mb-3">Cetak</button>
+													<button id="printPageButton"  type="submit" value="Simpan" class="btn btn-danger mb-3" onClick="printPage('konten')" >Cetak</button>
 											</div>
 										</div>
 
@@ -60,6 +93,7 @@ $newKode = $huruf . sprintf("%03s", $urutan);
 								</div>
 							</div>
 
+						</div>
 						</div>
 						</form>
 						</div>
@@ -72,5 +106,10 @@ $newKode = $huruf . sprintf("%03s", $urutan);
 
 		</div>
 	</div>
+	<script>
+   function printPage() {
+      window.print();
+   }
+	</script>
 
 <?php include 'template/footer.php'; ?>
